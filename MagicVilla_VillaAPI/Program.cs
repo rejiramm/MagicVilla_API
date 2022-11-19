@@ -1,8 +1,27 @@
+
+using Microsoft.AspNetCore.Mvc.Formatters;
+using MagicVilla_VillaAPI.Logging;
+
+//using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+//Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().
+    //WriteTo.File("Log/Villalog.txt", rollingInterval:RollingInterval.Day).CreateLogger();
+//builder.Host.UseSerilog();
+
+builder.Services.AddControllers(Option=> { 
+    //Option.ReturnHttpNotAcceptable = true;
+    }).AddNewtonsoftJson().AddXmlDataContractSerializerFormatters();
+builder.Services.AddSingleton<Ilogging,LoggingV2>();
+
+object loggerconfiguration()
+{
+    throw new NotImplementedException();
+}
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
