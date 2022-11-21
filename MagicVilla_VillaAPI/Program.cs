@@ -1,21 +1,29 @@
 
 using Microsoft.AspNetCore.Mvc.Formatters;
-using MagicVilla_VillaAPI.Logging;
+//using MagicVilla_VillaAPI.Logging;
+using MagicVilla_VillaAPI.Data;
+using Microsoft.EntityFrameworkCore;
 
 //using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
+builder.Services.AddDbContext<ApplicationDbContext>(option =>
+{
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
+});
 
 //Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().
-    //WriteTo.File("Log/Villalog.txt", rollingInterval:RollingInterval.Day).CreateLogger();
+//WriteTo.File("Log/Villalog.txt", rollingInterval:RollingInterval.Day).CreateLogger();
 //builder.Host.UseSerilog();
 
 builder.Services.AddControllers(Option=> { 
     //Option.ReturnHttpNotAcceptable = true;
     }).AddNewtonsoftJson().AddXmlDataContractSerializerFormatters();
-builder.Services.AddSingleton<Ilogging,LoggingV2>();
+
+
 
 object loggerconfiguration()
 {
