@@ -51,42 +51,37 @@ namespace MagicVilla_VillaAPI.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult<VillaDTO> CreateVilla([FromBody] VillaDTO villaDTO)
+        public ActionResult<VillaDTO> CreateVilla([FromBody] VillaCreateDTO villacreateDTO)
         {
             //if(!ModelState.IsValid)
                 //return BadRequest();
-            if(_db.Villas.FirstOrDefault(u => u.Name.ToLower()==villaDTO.Name.ToLower())!=null)
+            if(_db.Villas.FirstOrDefault(u => u.Name.ToLower()==villacreateDTO.Name.ToLower())!=null)
             {
                 ModelState.AddModelError("Custom Error", "Villa already exists");
                 return BadRequest(ModelState);
             }
 
 
-            if (villaDTO == null)
+            if (villacreateDTO == null)
             {
-                return Ok(BadRequest(villaDTO));
+                return Ok(BadRequest(villacreateDTO));
             }
-            if (villaDTO.Id>0)
-            {
-                return Ok(StatusCodes.Status500InternalServerError);
-            }
-            // villaDTO.Id = Villastore.Villalist.OrderByDescending(u => u.Id).FirstOrDefault().Id + 1;
+           // villaDTO.Id = Villastore.Villalist.OrderByDescending(u => u.Id).FirstOrDefault().Id + 1;
 
             //Villastore.Villalist.Add(villaDTO);
             Villa model = new()
             {
-                Name = villaDTO.Name,
-                Id = villaDTO.Id,
-                Details = villaDTO.Details,
-                Rate = villaDTO.Rate,
-                Sqft = villaDTO.Sqft,
-                Occupancy = villaDTO.Occupancy,
-                ImageUrl = villaDTO.ImageUrl,
-                Amenity = villaDTO.Amenity
+                Name = villacreateDTO.Name,
+                Details = villacreateDTO.Details,
+                Rate = villacreateDTO.Rate,
+                Sqft = villacreateDTO.Sqft,
+                Occupancy = villacreateDTO.Occupancy,
+                ImageUrl = villacreateDTO.ImageUrl,
+                Amenity = villacreateDTO.Amenity
             };
             _db.Villas.Add(model);
             _db.SaveChanges();  
-            return CreatedAtRoute("GetVilla",new { id = villaDTO.Id },villaDTO);
+            return CreatedAtRoute("GetVilla",new { id = model.Id },model);
         }
 
         [ProducesResponseType(StatusCodes.Status404NotFound)]
