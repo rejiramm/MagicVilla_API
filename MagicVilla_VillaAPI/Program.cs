@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc.Formatters;
 //using MagicVilla_VillaAPI.Logging;
 using MagicVilla_VillaAPI.Data;
 using Microsoft.EntityFrameworkCore;
+using MagicVilla_VillaAPI;
+using MagicVilla_VillaAPI.Repositories.IRepositories;
+using MagicVilla_VillaAPI.Repositories;
 
 //using Serilog;
 
@@ -14,6 +17,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
 });
+builder.Services.AddAutoMapper(typeof(MappingConfig));
+
+
+builder.Services.AddScoped<IVillarepository, VillaRepository>();
+builder.Services.AddScoped<IVillaNumberRepository, VillaNumberRepository>();
 
 //Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().
 //WriteTo.File("Log/Villalog.txt", rollingInterval:RollingInterval.Day).CreateLogger();

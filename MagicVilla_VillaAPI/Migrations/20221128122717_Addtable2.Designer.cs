@@ -4,6 +4,7 @@ using MagicVilla_VillaAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagicVilla_VillaAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221128122717_Addtable2")]
+    partial class Addtable2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,11 +72,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 1,
                             Amenity = "",
-<<<<<<< Updated upstream
-                            Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6573),
-=======
-                            Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7905),
->>>>>>> Stashed changes
+                            Createddate = new DateTime(2022, 11, 28, 17, 57, 17, 291, DateTimeKind.Local).AddTicks(9790),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa3.jpg",
                             Name = "Royal Villa",
@@ -87,11 +85,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 2,
                             Amenity = "",
-<<<<<<< Updated upstream
-                            Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6585),
-=======
-                            Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7915),
->>>>>>> Stashed changes
+                            Createddate = new DateTime(2022, 11, 28, 17, 57, 17, 291, DateTimeKind.Local).AddTicks(9800),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa1.jpg",
                             Name = "Premium Pool Villa",
@@ -104,11 +98,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 3,
                             Amenity = "",
-<<<<<<< Updated upstream
-                            Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6586),
-=======
-                            Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7916),
->>>>>>> Stashed changes
+                            Createddate = new DateTime(2022, 11, 28, 17, 57, 17, 291, DateTimeKind.Local).AddTicks(9802),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa4.jpg",
                             Name = "Luxury Pool Villa",
@@ -121,11 +111,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 4,
                             Amenity = "",
-<<<<<<< Updated upstream
-                            Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6587),
-=======
-                            Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7917),
->>>>>>> Stashed changes
+                            Createddate = new DateTime(2022, 11, 28, 17, 57, 17, 291, DateTimeKind.Local).AddTicks(9803),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa5.jpg",
                             Name = "Diamond Villa",
@@ -138,11 +124,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 5,
                             Amenity = "",
-<<<<<<< Updated upstream
-                            Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6588),
-=======
-                            Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7918),
->>>>>>> Stashed changes
+                            Createddate = new DateTime(2022, 11, 28, 17, 57, 17, 291, DateTimeKind.Local).AddTicks(9804),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa2.jpg",
                             Name = "Diamond Pool Villa",
@@ -151,42 +133,6 @@ namespace MagicVilla_VillaAPI.Migrations
                             Sqft = 1100,
                             Updatedate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
-                });
-
-            modelBuilder.Entity("MagicVilla_VillaAPI.Models.VillaNumber", b =>
-                {
-                    b.Property<int>("VillaNo")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Createdate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("SpecialDetails")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Updatedate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("VillaID")
-                        .HasColumnType("int");
-
-                    b.HasKey("VillaNo");
-
-                    b.HasIndex("VillaID");
-
-                    b.ToTable("VillaNumbers");
-                });
-
-            modelBuilder.Entity("MagicVilla_VillaAPI.Models.VillaNumber", b =>
-                {
-                    b.HasOne("MagicVilla_VillaAPI.Models.Villa", "Villa")
-                        .WithMany()
-                        .HasForeignKey("VillaID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Villa");
                 });
 #pragma warning restore 612, 618
         }

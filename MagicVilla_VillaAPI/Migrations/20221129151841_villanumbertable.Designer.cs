@@ -4,6 +4,7 @@ using MagicVilla_VillaAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagicVilla_VillaAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221129151841_villanumbertable")]
+    partial class villanumbertable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,11 +72,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 1,
                             Amenity = "",
-<<<<<<< Updated upstream
-                            Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6573),
-=======
                             Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7905),
->>>>>>> Stashed changes
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa3.jpg",
                             Name = "Royal Villa",
@@ -87,11 +85,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 2,
                             Amenity = "",
-<<<<<<< Updated upstream
-                            Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6585),
-=======
                             Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7915),
->>>>>>> Stashed changes
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa1.jpg",
                             Name = "Premium Pool Villa",
@@ -104,11 +98,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 3,
                             Amenity = "",
-<<<<<<< Updated upstream
-                            Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6586),
-=======
                             Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7916),
->>>>>>> Stashed changes
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa4.jpg",
                             Name = "Luxury Pool Villa",
@@ -121,11 +111,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 4,
                             Amenity = "",
-<<<<<<< Updated upstream
-                            Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6587),
-=======
                             Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7917),
->>>>>>> Stashed changes
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa5.jpg",
                             Name = "Diamond Villa",
@@ -138,11 +124,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 5,
                             Amenity = "",
-<<<<<<< Updated upstream
-                            Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6588),
-=======
                             Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7918),
->>>>>>> Stashed changes
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa2.jpg",
                             Name = "Diamond Pool Villa",
