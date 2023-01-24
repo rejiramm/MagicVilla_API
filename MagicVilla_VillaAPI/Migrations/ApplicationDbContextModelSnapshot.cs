@@ -70,11 +70,15 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 1,
                             Amenity = "",
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                             Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6573),
 =======
                             Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7905),
 >>>>>>> Stashed changes
+=======
+                            Createddate = new DateTime(2022, 11, 26, 19, 47, 45, 444, DateTimeKind.Local).AddTicks(8094),
+>>>>>>> 198ea108a6242420400127a6d135e2557c8d7884
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa3.jpg",
                             Name = "Royal Villa",
@@ -87,11 +91,15 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 2,
                             Amenity = "",
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                             Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6585),
 =======
                             Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7915),
 >>>>>>> Stashed changes
+=======
+                            Createddate = new DateTime(2022, 11, 26, 19, 47, 45, 444, DateTimeKind.Local).AddTicks(8105),
+>>>>>>> 198ea108a6242420400127a6d135e2557c8d7884
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa1.jpg",
                             Name = "Premium Pool Villa",
@@ -104,11 +112,15 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 3,
                             Amenity = "",
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                             Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6586),
 =======
                             Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7916),
 >>>>>>> Stashed changes
+=======
+                            Createddate = new DateTime(2022, 11, 26, 19, 47, 45, 444, DateTimeKind.Local).AddTicks(8106),
+>>>>>>> 198ea108a6242420400127a6d135e2557c8d7884
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa4.jpg",
                             Name = "Luxury Pool Villa",
@@ -121,11 +133,15 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 4,
                             Amenity = "",
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                             Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6587),
 =======
                             Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7917),
 >>>>>>> Stashed changes
+=======
+                            Createddate = new DateTime(2022, 11, 26, 19, 47, 45, 444, DateTimeKind.Local).AddTicks(8108),
+>>>>>>> 198ea108a6242420400127a6d135e2557c8d7884
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa5.jpg",
                             Name = "Diamond Villa",
@@ -138,11 +154,15 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 5,
                             Amenity = "",
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                             Createddate = new DateTime(2022, 11, 20, 18, 27, 23, 693, DateTimeKind.Local).AddTicks(6588),
 =======
                             Createddate = new DateTime(2022, 11, 29, 20, 48, 41, 58, DateTimeKind.Local).AddTicks(7918),
 >>>>>>> Stashed changes
+=======
+                            Createddate = new DateTime(2022, 11, 26, 19, 47, 45, 444, DateTimeKind.Local).AddTicks(8110),
+>>>>>>> 198ea108a6242420400127a6d135e2557c8d7884
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmastery.com/bluevillaimages/villa2.jpg",
                             Name = "Diamond Pool Villa",

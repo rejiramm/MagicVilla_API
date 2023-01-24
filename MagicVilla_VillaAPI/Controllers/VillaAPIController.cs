@@ -89,53 +89,11 @@ namespace MagicVilla_VillaAPI.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-<<<<<<< Updated upstream
         public ActionResult<VillaDTO> CreateVilla([FromBody] VillaDTO villaDTO)
-=======
-        public async Task<ActionResult<APIResponse>> CreateVilla([FromBody] VillaCreateDTO createDTO)
->>>>>>> Stashed changes
         {
-            try
-            {
-                //if(!ModelState.IsValid)
+            //if(!ModelState.IsValid)
                 //return BadRequest();
-<<<<<<< Updated upstream
             if(_db.Villas.FirstOrDefault(u => u.Name.ToLower()==villaDTO.Name.ToLower())!=null)
-=======
-                if (await _dbvilla.GetAsync(u => u.Name.ToLower() == createDTO.Name.ToLower()) != null)
-                {
-                    ModelState.AddModelError("Custom Error", "Villa already exists");
-                    return BadRequest(ModelState);
-                }
-
-
-                if (createDTO == null)
-                {
-                    return Ok(BadRequest(createDTO));
-                }
-                // villaDTO.Id = Villastore.Villalist.OrderByDescending(u => u.Id).FirstOrDefault().Id + 1;
-
-                //Villastore.Villalist.Add(villaDTO);
-                Villa model = _mapper.Map<Villa>(createDTO);
-                //Villa model = new()
-                //{
-                //  Name = createDTO.Name,
-                //Details = createDTO.Details,
-                //Rate = createDTO.Rate,
-                //Sqft = createDTO.Sqft,
-                //Occupancy = createDTO.Occupancy,
-                //ImageUrl = createDTO.ImageUrl,
-                //Amenity = createDTO.Amenity
-                //};
-                await _dbvilla.CreateAsync(model);
-
-                //var model1 = _mapper.Map<VillaDTO>(model);
-                _response.Result = _mapper.Map<VillaDTO>(model);
-                _response.StatusCode = HttpStatusCode.Created;
-                return CreatedAtRoute("GetVilla", new { id = model.Id }, _response);
-            }
-            catch (Exception ex)
->>>>>>> Stashed changes
             {
                 _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
@@ -144,34 +102,26 @@ namespace MagicVilla_VillaAPI.Controllers
 
 <<<<<<< Updated upstream
 
-            if (villaDTO == null)
+            if (villacreateDTO == null)
             {
-                return Ok(BadRequest(villaDTO));
+                return Ok(BadRequest(villacreateDTO));
             }
-            if (villaDTO.Id>0)
-            {
-                return Ok(StatusCodes.Status500InternalServerError);
-            }
-            // villaDTO.Id = Villastore.Villalist.OrderByDescending(u => u.Id).FirstOrDefault().Id + 1;
+           // villaDTO.Id = Villastore.Villalist.OrderByDescending(u => u.Id).FirstOrDefault().Id + 1;
 
             //Villastore.Villalist.Add(villaDTO);
             Villa model = new()
             {
-                Name = villaDTO.Name,
-                Id = villaDTO.Id,
-                Details = villaDTO.Details,
-                Rate = villaDTO.Rate,
-                Sqft = villaDTO.Sqft,
-                Occupancy = villaDTO.Occupancy,
-                ImageUrl = villaDTO.ImageUrl,
-                Amenity = villaDTO.Amenity
+                Name = villacreateDTO.Name,
+                Details = villacreateDTO.Details,
+                Rate = villacreateDTO.Rate,
+                Sqft = villacreateDTO.Sqft,
+                Occupancy = villacreateDTO.Occupancy,
+                ImageUrl = villacreateDTO.ImageUrl,
+                Amenity = villacreateDTO.Amenity
             };
             _db.Villas.Add(model);
             _db.SaveChanges();  
             return CreatedAtRoute("GetVilla",new { id = villaDTO.Id },villaDTO);
-=======
-            return _response;
->>>>>>> Stashed changes
         }
 
         [ProducesResponseType(StatusCodes.Status404NotFound)]
